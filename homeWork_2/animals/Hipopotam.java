@@ -1,19 +1,6 @@
 package homeWork_2.animals;
 
 public class Hipopotam extends Herbivore {
-    private final String name = "Hipopotam";
-
-    @Override
-    public void run() {
-        System.out.println("Hipopotam running!");
-        super.setEnergy(getEnergy() - 1);
-    }
-
-    @Override
-    public void swim() {
-        System.out.println("Hipopotam swimming!");
-        super.setEnergy(getEnergy() - 2);
-    }
 
     @Override
     public String voice() {
@@ -21,7 +8,39 @@ public class Hipopotam extends Herbivore {
     }
 
     @Override
-    public String getNameOfAnimal() {
-        return name;
+    public void sailFast() {
+        System.out.printf("%s swim fast!%n", super.getName());
+        super.setEnergy(getEnergy() - 2);
+    }
+
+    @Override
+    public void diving() {
+        System.out.printf("%s diving!%n", super.getName());
+        super.setEnergy(getEnergy() - 1);
+    }
+
+    @Override
+    public void hopOff() {
+
+    }
+
+    @Override
+    public void toLand() {
+
+    }
+
+    @Override
+    public void race() {
+
+    }
+
+    @Override
+    public void go() {
+
+    }
+
+    @Override
+    public void crawl() {
+
     }
 }

@@ -1,6 +1,7 @@
 package homeWork_2.food;
 
 public abstract class Food {
+    private String name;
     private int satiety;
 
     public int getSatiety() {
@@ -11,5 +12,7 @@ public abstract class Food {
         this.satiety = satiety;
     }
 
-    public abstract String getName();
+    public String getName() {
+        return name;
+    }
 }

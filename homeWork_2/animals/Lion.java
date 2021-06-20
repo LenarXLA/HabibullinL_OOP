@@ -1,13 +1,6 @@
 package homeWork_2.animals;
 
 public class Lion extends Carnivorous {
-    private final String name = "Lion";
-
-    @Override
-    public void run() {
-        System.out.println("Lion running!");
-        super.setEnergy(getEnergy() - 1);
-    }
 
     @Override
     public String voice() {
@@ -15,7 +8,40 @@ public class Lion extends Carnivorous {
     }
 
     @Override
-    public String getNameOfAnimal() {
-        return name;
+    public void race() {
+        System.out.printf("%s run fast!%n", super.getName());
+        super.setEnergy(getEnergy() - 3);
+    }
+
+    @Override
+    public void go() {
+        System.out.printf("%s walk slowly%n", super.getName());
+        super.setEnergy(getEnergy() - 2);
+    }
+
+    @Override
+    public void crawl() {
+        System.out.printf("%s crawl%n", super.getName());
+        super.setEnergy(getEnergy() - 1);
+    }
+
+    @Override
+    public void hopOff() {
+
+    }
+
+    @Override
+    public void toLand() {
+
+    }
+
+    @Override
+    public void sailFast() {
+
+    }
+
+    @Override
+    public void diving() {
+
     }
 }

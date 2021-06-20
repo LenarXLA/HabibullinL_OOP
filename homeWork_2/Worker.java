@@ -14,6 +14,6 @@ public class Worker {
             new Exception().printStackTrace();
             System.exit(1);
         }
-        System.out.println(animal.getNameOfAnimal() + " says: " + animal.voice());
+        System.out.println(animal.getName() + " says: " + animal.voice());
     }
 }

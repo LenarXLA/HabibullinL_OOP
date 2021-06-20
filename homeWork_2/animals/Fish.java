@@ -1,16 +1,46 @@
 package homeWork_2.animals;
 
 public class Fish extends Herbivore {
-    private final String name = "Fish";
 
     @Override
-    public void swim() {
-        System.out.println("Fish swimming!");
+    public void sailFast() {
+        System.out.printf("%s swim fast!%n", super.getName());
         super.setEnergy(getEnergy() - 1);
     }
 
     @Override
-    public String getNameOfAnimal() {
-        return name;
+    public void diving() {
+        System.out.printf("%s diving!%n", super.getName());
+        super.setEnergy(getEnergy() - 1);
+    }
+
+    @Override
+    public String voice() {
+        return null;
+    }
+
+    @Override
+    public void hopOff() {
+
+    }
+
+    @Override
+    public void toLand() {
+
+    }
+
+    @Override
+    public void race() {
+
+    }
+
+    @Override
+    public void go() {
+
+    }
+
+    @Override
+    public void crawl() {
+
     }
 }

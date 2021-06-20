@@ -1,6 +1,6 @@
 package homeWork_2.food;
 
-public class Grass extends Food {
+public abstract class Grass extends Food {
     @Override
     public String getName() {
         return "Grass";
