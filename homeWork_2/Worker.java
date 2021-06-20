@@ -5,7 +5,7 @@ import homeWork_2.animals.Animal;
 import homeWork_2.food.Food;
 
 public class Worker {
-    public void feed(Animal animal, Food food) {
+    public void feed(Animal animal, Food food) throws WrongFoodException {
         System.out.println(animal.eat(food));
     }
 

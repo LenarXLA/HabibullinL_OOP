@@ -1,7 +1,6 @@
 package homeWork_2.animals;
 
 public class Lion extends Carnivorous {
-
     @Override
     public String voice() {
         return "Rrrrraaaaaa!";

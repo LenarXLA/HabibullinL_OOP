@@ -1,7 +1,6 @@
 package homeWork_2.animals;
 
 public class Fish extends Herbivore {
-
     @Override
     public void sailFast() {
         System.out.printf("%s swim fast!%n", super.getName());
