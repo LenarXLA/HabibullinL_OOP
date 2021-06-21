@@ -8,6 +8,11 @@ public abstract class Animal implements Voice, Fly, Run, Swim {
     private int energy;
     private int size;
 
+    public Animal(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
+
     public int getEnergy() {
         return energy;
     }

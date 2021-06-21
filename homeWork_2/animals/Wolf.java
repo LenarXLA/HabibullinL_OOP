@@ -1,6 +1,10 @@
 package homeWork_2.animals;
 
 public class Wolf extends Carnivorous {
+    public Wolf(String name, int size) {
+        super(name, size);
+    }
+
     @Override
     public String voice() {
         return "Khrrrr!";

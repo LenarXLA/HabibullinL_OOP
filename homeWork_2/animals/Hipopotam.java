@@ -1,6 +1,10 @@
 package homeWork_2.animals;
 
 public class Hipopotam extends Herbivore {
+    public Hipopotam(String name, int size) {
+        super(name, size);
+    }
+
     @Override
     public String voice() {
         return "Ghhhhh!";

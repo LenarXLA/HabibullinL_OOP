@@ -1,6 +1,10 @@
 package homeWork_2.animals;
 
 public class Duck extends Herbivore {
+    public Duck(String name, int size) {
+        super(name, size);
+    }
+
     @Override
     public String voice() {
         return "Krya-Krya!";

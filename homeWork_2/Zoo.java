@@ -10,19 +10,13 @@ public class Zoo {
     public static void main(String[] args) throws WrongFoodException {
         Worker worker = new Worker();
 
-        Duck duck = new Duck();
-        duck.setName("Donald-Duck");
-        Fish fish = new Fish();
-        fish.setName("Nemo-fish");
-        Hipopotam hipopotam = new Hipopotam();
-        hipopotam.setName("Hippo");
+        Duck duck = new Duck("Donald-Duck", 5);
+        Fish fish = new Fish("Nemo-fish", 3);
+        Hipopotam hipopotam = new Hipopotam("Hippo", 20);
 
-        Lion lion = new Lion();
-        lion.setName("King-lion");
-        Wolf wolf = new Wolf();
-        wolf.setName("Dark-wolf");
-        Crocodile crocodile = new Crocodile();
-        crocodile.setName("Gena-Crocodile");
+        Lion lion = new Lion("King-lion", 15);
+        Wolf wolf = new Wolf("Dark-wolf", 12);
+        Crocodile crocodile = new Crocodile("Gena-Crocodile", 17);
 
         Beef beef = new Beef();
         ChickenMeat chickenMeat = new ChickenMeat();

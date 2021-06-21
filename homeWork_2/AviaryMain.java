@@ -4,53 +4,51 @@ import homeWork_2.animals.*;
 import homeWork_2.food.Flower;
 
 public class AviaryMain {
-    public static void main(String[] args) throws WrongFoodException {
-        Aviary<Carnivorous> carnivorousAviary = new Aviary<>(SizeOfAviary.LARGE);
-        Aviary<Herbivore> herbivoreAviary = new Aviary<>(SizeOfAviary.ULTRA_SMALL);
+    public static void main(String[] args) {
+        Aviary<Animal> aviary1 = new Aviary<>(SizeOfAviary.LARGE);
+        Aviary<Animal> aviary2 = new Aviary<>(SizeOfAviary.ULTRA_SMALL);
 
 
-        Hipopotam hipopotam = new Hipopotam();
-        hipopotam.setName("Hippo");
-        hipopotam.setSize(30);
-        Lion lion = new Lion();
-        lion.setName("Leo");
-        lion.setSize(15);
-        Wolf wolf = new Wolf();
-        wolf.setName("Wolfgang");
-        wolf.setSize(12);
-        Crocodile crocodile = new Crocodile();
-        crocodile.setName("Gena");
-        crocodile.setSize(25);
+        Herbivore hipopotam = new Hipopotam("Hippo", 30);
+        Herbivore duck = new Duck("Duck", 5);
+        Carnivorous lion = new Lion("Leo", 15);
+        Carnivorous wolf = new Wolf("Wolfgang", 12);
+        Carnivorous crocodile = new Crocodile("Gena", 25);
 
         // Попытаемся поместить большое животное в маленький вольер
-        herbivoreAviary.addAnimal(hipopotam);
+        aviary2.addAnimal(hipopotam);
 
         System.out.println("___________________________________________");
 
         // Поместить хищников в их вольер
-        carnivorousAviary.addAnimal(lion);
-        carnivorousAviary.addAnimal(wolf);
-        carnivorousAviary.addAnimal(crocodile);
+        aviary1.addAnimal(lion);
+        aviary1.addAnimal(wolf);
+        aviary1.addAnimal(crocodile);
+
+        System.out.println("___________________________________________");
+        // Попытаемся поместить травоядное вольер хищников
+        aviary1.addAnimal(duck);
+        System.out.println("___________________________________________");
 
         // Проверим остаток места
-        System.out.printf("The remainder of the aviary: %s%n", carnivorousAviary.getSizeAviary().getSize());
+        System.out.printf("The remainder of the aviary: %s%n", aviary1.getSizeAviary().getSize());
 
         System.out.println("___________________________________________");
 
         // Посмотрим животных в вольере
-        carnivorousAviary.printAviary();
+        aviary1.printAviary();
 
         System.out.println("___________________________________________");
 
         //  удалим животное из вольера
-        carnivorousAviary.deleteAnimal("Leo");
+        aviary1.deleteAnimal("Leo");
         System.out.println("After deleting:");
-        carnivorousAviary.printAviary();
+        aviary1.printAviary();
 
         System.out.println("___________________________________________");
 
         // получим ссылку на животное в вольере по его кличке и распечатаем имя
-        System.out.println(carnivorousAviary.getAnimal("Wolfgang").getName());
+        System.out.println(aviary1.getAnimal("Wolfgang").getName());
 
         // исключение если еда не подходит животному
         System.out.println(crocodile.eat(new Flower()));
